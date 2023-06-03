@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/256836__deleted-user-4772965__light-switch-off-3.wav-1b156da0c9ec3e763905bd154950d7f1.sample"
+
+[deps]
+
+source_file="res://Assets/256836__deleted-user-4772965__light-switch-off-3.wav"
+dest_files=[ "res://.import/256836__deleted-user-4772965__light-switch-off-3.wav-1b156da0c9ec3e763905bd154950d7f1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
