@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/light_texture.png" type="Texture" id=1]
 [ext_resource path="res://src/UI/Main Menu UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Scenes/Main Menu.gd" type="Script" id=3]
 [ext_resource path="res://src/Scenes/DeskLamp.gd" type="Script" id=4]
 [ext_resource path="res://Assets/256836__deleted-user-4772965__light-switch-off-3.wav" type="AudioStream" id=5]
-[ext_resource path="res://src/Scenes/VersionInfo.gd" type="Script" id=6]
 [ext_resource path="res://src/Scenes/PopSelect.gd" type="Script" id=7]
 
 [sub_resource type="Animation" id=1]
@@ -295,9 +294,6 @@ position = Vector2( 67.7559, 53.865 )
 scale = Vector2( 0.5, 0.5 )
 stream = ExtResource( 5 )
 
-[node name="VersionInfo" type="Node" parent="."]
-script = ExtResource( 6 )
-
 [node name="VI" type="Control" parent="."]
 visible = false
 anchor_right = 1.0
@@ -354,7 +350,9 @@ scroll_horizontal_enabled = false
 [node name="VIDataLabel" type="Label" parent="VI/VICont/VISplit/VScrollBar"]
 margin_bottom = 14.0
 
+[connection signal="pressed" from="New Game Window/PanelContainer/MainSplit/TopBar/BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="pressed" from="Main Menu UI/MenuContainer/VBoxContainer/VersionButton" to="." method="_on_VersionButton_pressed"]
+[connection signal="pressed" from="Main Menu UI/MenuContainer/VBoxContainer/NGButton" to="." method="_on_NGButton_pressed"]
 [connection signal="pressed" from="Main Menu UI/MenuContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
 [connection signal="animation_finished" from="DeskLamp/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="VI/VICont/VISplit/HSplitContainer/VIHideButton" to="." method="_on_VIHideButton_pressed"]

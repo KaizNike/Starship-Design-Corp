@@ -22,6 +22,7 @@ onready var timeLabel = $UI/HSplitContainer/PanelContainer/VBoxContainer/TimeLab
 # Called when the node enters the scene tree for the first time.
 func _ready():
 #	print("Pretty good, I spent " + str(hours) + " hours on making an idle game.")
+	$UI/HSplitContainer/PanelContainer/VBoxContainer/VersionLabel.text = str("v" + str(Globals.version[0]) + "." + str(Globals.version[1]) + "." + str(Globals.version[2]))
 	pass # Replace with function body.
 
 

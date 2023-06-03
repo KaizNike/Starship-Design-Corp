@@ -6,9 +6,6 @@
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -56,45 +53,50 @@ Design
 Corp"
 align = 1
 
-[node name="Label2" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+[node name="VersionLabel" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
 margin_top = 144.0
 margin_right = 68.0
 margin_bottom = 158.0
+text = "v ???"
+
+[node name="Label2" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+margin_top = 162.0
+margin_right = 68.0
+margin_bottom = 176.0
 text = "Date:"
 
 [node name="TimeLabel" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
-margin_top = 162.0
+margin_top = 180.0
 margin_right = 68.0
-margin_bottom = 227.0
+margin_bottom = 245.0
 text = "9999999 C
 99 J
 99 M
 99 C"
 
 [node name="Label3" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
-margin_top = 231.0
-margin_right = 68.0
-margin_bottom = 245.0
-text = "Cash:"
-
-[node name="Label5" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
 margin_top = 249.0
 margin_right = 68.0
 margin_bottom = 263.0
-text = "1 Bool"
+text = "Cash:"
 
-[node name="Label6" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+[node name="Label5" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
 margin_top = 267.0
 margin_right = 68.0
 margin_bottom = 281.0
+text = "1 Bool"
+
+[node name="Label6" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+margin_top = 285.0
+margin_right = 68.0
+margin_bottom = 299.0
 text = "Speed:"
 
 [node name="TimeSlider" type="HSlider" parent="HSplitContainer/PanelContainer/VBoxContainer"]
-margin_top = 285.0
+margin_top = 303.0
 margin_right = 68.0
-margin_bottom = 301.0
+margin_bottom = 319.0
 max_value = 4.0
-step = 1.0
 tick_count = 5
 ticks_on_borders = true
 
@@ -105,7 +107,6 @@ margin_bottom = 600.0
 tab_align = 0
 
 [node name="Overview" type="Control" parent="HSplitContainer/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -136,7 +137,7 @@ text = "Do the Thing"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HSplitContainer/TabContainer/Overview/HSplitContainer"]
 margin_left = 105.0
-margin_right = 926.0
+margin_right = 922.0
 margin_bottom = 564.0
 text = "Hello this is some content."
 
@@ -160,7 +161,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 24.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer/TabContainer/Design/TabContainer/Main"]
 anchor_right = 1.0
@@ -170,6 +173,8 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/TabContainer/Design/TabContainer/Main/ScrollContainer"]
+margin_right = 95.0
+margin_bottom = 20.0
 
 [node name="HSplitContainer" type="HSplitContainer" parent="HSplitContainer/TabContainer/Design/TabContainer/Main/ScrollContainer/VBoxContainer"]
 margin_right = 95.0
@@ -219,15 +224,19 @@ __meta__ = {
 [node name="ProdNo" type="CenterContainer" parent="HSplitContainer/TabContainer/Production/ProductionTab"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ProdNoLabel" type="Label" parent="HSplitContainer/TabContainer/Production/ProductionTab/ProdNo"]
-margin_left = 380.0
-margin_top = 275.0
-margin_right = 541.0
-margin_bottom = 289.0
+margin_left = 376.0
+margin_top = 269.0
+margin_right = 537.0
+margin_bottom = 283.0
 text = "No star ships to produce!"
 
 [node name="Marketing" type="Control" parent="HSplitContainer/TabContainer"]
@@ -252,12 +261,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="MarkNoLabel" type="Label" parent="HSplitContainer/TabContainer/Marketing/TabContainer/MarkNo"]
-margin_left = 364.0
-margin_top = 271.0
-margin_right = 554.0
-margin_bottom = 285.0
+margin_left = 362.0
+margin_top = 269.0
+margin_right = 552.0
+margin_bottom = 283.0
 text = "You lack anyone in marketing."
 
 [node name="Research" type="Control" parent="HSplitContainer/TabContainer"]
@@ -357,6 +368,7 @@ margin_bottom = 283.0
 text = "You lack a base of operations."
 
 [node name="Travel" type="Control" parent="HSplitContainer/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -404,10 +416,12 @@ __meta__ = {
 }
 
 [node name="General" type="GridContainer" parent="HSplitContainer/TabContainer/Getments/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 25.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 columns = 6
 __meta__ = {
 "_edit_use_anchors_": false
@@ -455,6 +469,7 @@ text = "Sold your
 soul..."
 
 [node name="Advacement" type="GridContainer" parent="HSplitContainer/TabContainer/Getments/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0

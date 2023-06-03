@@ -19,6 +19,10 @@ config/description="Run a company among the stars, or into the ground. Design sh
 run/main_scene="res://src/Scenes/Main Menu.tscn"
 config/icon="res://Icon.png"
 
+[autoload]
+
+Globals="*res://src/Autoload/Globals.gd"
+
 [rendering]
 
 quality/driver/driver_name="GLES2"

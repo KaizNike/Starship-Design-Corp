@@ -8,8 +8,8 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$"Main Menu UI/MenuContainer/VBoxContainer/VersionButton".text = "Version " + str($VersionInfo.version)
-	$VI/VICont/VISplit/VScrollBar/VIDataLabel.text = $VersionInfo.info
+	$"Main Menu UI/MenuContainer/VBoxContainer/VersionButton".text = "Version " + str(str(Globals.version[0]) + "." + str(Globals.version[1]) + "." + str(Globals.version[2]))
+	$VI/VICont/VISplit/VScrollBar/VIDataLabel.text = Globals.info
 	pass # Replace with function body.
 
 
@@ -47,4 +47,16 @@ func _on_Button_pressed():
 func _on_VIHideButton_pressed():
 	$VI.visible = false
 	$VI/VICont.hide()
+	pass # Replace with function body.
+
+
+func _on_NGButton_pressed():
+	$"Main Menu UI".visible = false
+	$"New Game Window".visible = true
+	pass # Replace with function body.
+
+
+func _on_BackButton_pressed():
+	$"Main Menu UI".visible = true
+	$"New Game Window".visible = false
 	pass # Replace with function body.
