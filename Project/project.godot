@@ -21,7 +21,7 @@ config/icon="res://Icon.png"
 
 [autoload]
 
-Globals="*res://src/Autoload/Globals.gd"
+Globals="*res://src/Autoload/Globals.tscn"
 
 [rendering]
 
