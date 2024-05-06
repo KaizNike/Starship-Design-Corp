@@ -77,15 +77,14 @@ gravity = Vector2( 0, 0 )
 initial_velocity = 50.0
 
 [node name="New Game Window" type="CenterContainer" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="PanelContainer" type="PanelContainer" parent="New Game Window"]
-margin_left = 505.0
-margin_top = 293.0
-margin_right = 519.0
-margin_bottom = 307.0
+margin_left = 397.0
+margin_top = 161.0
+margin_right = 627.0
+margin_bottom = 439.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -93,12 +92,16 @@ __meta__ = {
 [node name="MainSplit" type="VSplitContainer" parent="New Game Window/PanelContainer"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 253.0
-margin_bottom = 221.0
+margin_right = 223.0
+margin_bottom = 271.0
+collapsed = true
+dragger_visibility = 1
 
 [node name="TopBar" type="HSplitContainer" parent="New Game Window/PanelContainer/MainSplit"]
-margin_right = 246.0
+margin_right = 216.0
 margin_bottom = 20.0
+collapsed = true
+dragger_visibility = 2
 
 [node name="NGLabel" type="Label" parent="New Game Window/PanelContainer/MainSplit/TopBar"]
 margin_top = 3.0
@@ -107,71 +110,75 @@ margin_bottom = 17.0
 text = "New Game:"
 
 [node name="BackButton" type="Button" parent="New Game Window/PanelContainer/MainSplit/TopBar"]
-margin_left = 86.0
-margin_right = 246.0
+margin_left = 74.0
+margin_right = 216.0
 margin_bottom = 20.0
 text = "Back"
 
 [node name="ContentSplit" type="VSplitContainer" parent="New Game Window/PanelContainer/MainSplit"]
 margin_top = 32.0
-margin_right = 246.0
-margin_bottom = 214.0
+margin_right = 216.0
+margin_bottom = 264.0
+collapsed = true
+dragger_visibility = 1
 
 [node name="OptionsScroll" type="ScrollContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit"]
-margin_right = 246.0
-margin_bottom = 150.0
-rect_min_size = Vector2( 0, 150 )
+margin_right = 216.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
 scroll_horizontal_enabled = false
 
 [node name="Options" type="VSplitContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll"]
-margin_right = 234.0
-margin_bottom = 216.0
+margin_right = 216.0
+margin_bottom = 170.0
 
 [node name="Presets" type="VSplitContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options"]
-margin_right = 234.0
-margin_bottom = 46.0
+margin_right = 216.0
 
 [node name="PresetsLabel" type="Label" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/Presets"]
-margin_right = 234.0
+visible = false
+margin_right = 216.0
 margin_bottom = 14.0
 text = "Presets:"
 
 [node name="PresetsGrid" type="GridContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/Presets"]
-margin_top = 26.0
-margin_right = 234.0
-margin_bottom = 46.0
+visible = false
+margin_right = 216.0
 columns = 5
 
 [node name="StanButton" type="Button" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/Presets/PresetsGrid"]
+visible = false
 margin_right = 67.0
 margin_bottom = 20.0
 text = "Standard"
 
 [node name="SCPButton" type="Button" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/Presets/PresetsGrid"]
+visible = false
 margin_left = 71.0
 margin_right = 106.0
 margin_bottom = 20.0
 text = "SCP"
 
 [node name="PresentButton" type="Button" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/Presets/PresetsGrid"]
+visible = false
 margin_left = 110.0
 margin_right = 171.0
 margin_bottom = 20.0
 text = "Present"
 
 [node name="OptionsBox" type="VBoxContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options"]
-margin_top = 58.0
-margin_right = 234.0
-margin_bottom = 216.0
+margin_top = 12.0
+margin_right = 216.0
+margin_bottom = 170.0
 
 [node name="OptionsLabel" type="Label" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox"]
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 14.0
 text = "Options:"
 
 [node name="PopSplit" type="HSplitContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox"]
 margin_top = 18.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 38.0
 
 [node name="PopLabel" type="Label" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/PopSplit"]
@@ -182,14 +189,17 @@ text = "Population Density:"
 
 [node name="PopSelect" type="OptionButton" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/PopSplit"]
 margin_left = 137.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 20.0
-text = "Population"
+disabled = true
+text = "Jungle"
+items = [ "Single", null, false, 0, null, "Sporadic", null, false, 1, null, "Jungle", null, false, 2, null, "Universal", null, false, 3, null ]
+selected = 2
 script = ExtResource( 7 )
 
 [node name="FounderSplit" type="HSplitContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox"]
 margin_top = 42.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 62.0
 
 [node name="FounderLabel" type="Label" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/FounderSplit"]
@@ -200,12 +210,16 @@ text = "Founder Trait:"
 
 [node name="FTSelect" type="OptionButton" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/FounderSplit"]
 margin_left = 100.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 20.0
+disabled = true
+text = "From Nothing"
+items = [ "CC Booleanaire", null, false, 0, null, "Parent Corp", null, false, 1, null, "Under Piratical", null, false, 2, null, "Slave Mind", null, false, 3, null, "From Nothing", null, false, 4, null ]
+selected = 4
 
 [node name="TechSplit" type="HSplitContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox"]
 margin_top = 66.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 86.0
 
 [node name="TechLabel" type="Label" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/TechSplit"]
@@ -216,12 +230,16 @@ text = "Tech Level:"
 
 [node name="TechSelect" type="OptionButton" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/TechSplit"]
 margin_left = 84.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 20.0
+disabled = true
+text = "Standard"
+items = [ "Present", null, false, 0, null, "Standard", null, false, 1, null, "Prehistory", null, false, 2, null, "Prohistory", null, false, 3, null, "Max", null, false, 4, null, "Fantasy", null, false, 5, null ]
+selected = 1
 
 [node name="EcoSplit" type="HSplitContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox"]
 margin_top = 90.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 110.0
 
 [node name="EcoLabel" type="Label" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/EcoSplit"]
@@ -232,28 +250,36 @@ text = "Economy Level:"
 
 [node name="EcoSelect" type="OptionButton" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/EcoSplit"]
 margin_left = 112.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 20.0
+disabled = true
+text = "Basic"
+items = [ "Basic", null, false, 0, null, "Advanced", null, false, 1, null ]
+selected = 0
 
 [node name="CompSplit" type="HSplitContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox"]
 margin_top = 114.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 134.0
 
 [node name="CompLabel" type="Label" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/CompSplit"]
 margin_top = 3.0
-margin_right = 79.0
+margin_right = 83.0
 margin_bottom = 17.0
-text = "Competition"
+text = "Competition:"
 
 [node name="CompSelect" type="OptionButton" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/CompSplit"]
-margin_left = 91.0
-margin_right = 234.0
+margin_left = 95.0
+margin_right = 216.0
 margin_bottom = 20.0
+disabled = true
+text = "Deadly Seven"
+items = [ "None", null, false, 0, null, "Massive Corporation", null, false, 1, null, "Deadly Seven", null, false, 2, null, "Dynamic", null, false, 3, null ]
+selected = 2
 
 [node name="SettingsSplit" type="HSplitContainer" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox"]
 margin_top = 138.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 158.0
 
 [node name="SettingsLabel" type="Label" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/SettingsSplit"]
@@ -264,19 +290,23 @@ text = "Game Settings:"
 
 [node name="GSSelect" type="OptionButton" parent="New Game Window/PanelContainer/MainSplit/ContentSplit/OptionsScroll/Options/OptionsBox/SettingsSplit"]
 margin_left = 109.0
-margin_right = 234.0
+margin_right = 216.0
 margin_bottom = 20.0
+disabled = true
+text = "Legacy"
+items = [ "Ironman", null, false, 0, null, "Legacy", null, false, 1, null, "Company", null, false, 2, null, "Progression", null, false, 3, null ]
+selected = 1
 
 [node name="StartButton" type="Button" parent="New Game Window/PanelContainer/MainSplit/ContentSplit"]
-margin_top = 162.0
-margin_right = 246.0
-margin_bottom = 182.0
+margin_top = 212.0
+margin_right = 216.0
+margin_bottom = 232.0
 text = "Start"
 
 [node name="Main Menu UI" parent="." instance=ExtResource( 2 )]
+visible = false
 
 [node name="DeskLamp" type="Light2D" parent="."]
-visible = false
 position = Vector2( 791, 214 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
@@ -351,6 +381,7 @@ scroll_horizontal_enabled = false
 margin_bottom = 14.0
 
 [connection signal="pressed" from="New Game Window/PanelContainer/MainSplit/TopBar/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="New Game Window/PanelContainer/MainSplit/ContentSplit/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="Main Menu UI/MenuContainer/VBoxContainer/VersionButton" to="." method="_on_VersionButton_pressed"]
 [connection signal="pressed" from="Main Menu UI/MenuContainer/VBoxContainer/NGButton" to="." method="_on_NGButton_pressed"]
 [connection signal="pressed" from="Main Menu UI/MenuContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

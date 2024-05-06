@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Icon.png" type="Texture" id=1]
 [ext_resource path="res://Godoticon.png" type="Texture" id=2]
+[ext_resource path="res://src/UI/UI.gd" type="Script" id=3]
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -37,6 +39,7 @@ margin_bottom = 593.0
 margin_right = 68.0
 margin_bottom = 20.0
 text = "Menu"
+items = [ "Mute", null, 1, false, false, 0, 0, null, "", false ]
 
 [node name="TextureRect" type="TextureRect" parent="HSplitContainer/PanelContainer/VBoxContainer"]
 margin_top = 24.0
